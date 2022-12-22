@@ -99,9 +99,7 @@ const Contacts = () => {
                     />
                   </div>
                 </form>
-                <button className="px-8 py-4 bg-blue-700 rounded-xl font-semibold text-white">
-                  Submit
-                </button>
+                <button className="become-a-mentor-btn">Submit</button>
               </div>
             </div>
           </div>

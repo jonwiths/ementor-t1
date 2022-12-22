@@ -62,14 +62,14 @@ const Register = () => {
         setS_cpassword('');
         s_passwordRef.current.focus();
       } else {
-        // await axios.post('http://localhost:8000/api/auth/register', {
-        //   s_fname,
-        //   s_lname,
-        //   s_email,
-        //   s_phone,
-        //   s_password,
-        //   s_cpassword
-        // });
+        await axios.post('http://localhost:8000/api/auth/register', {
+          s_fname,
+          s_lname,
+          s_email,
+          s_phone,
+          s_password,
+          s_cpassword
+        });
 
         setRegisterStatus('Account creation successful!');
         clearInput();

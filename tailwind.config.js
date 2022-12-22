@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'about-header-bg': "url('/src/assets/background/sample-page-bg.jpg')"
+        'about-header-bg':
+          "url('/src/assets/background/.webp/sample-page-bg.webp')"
       }
     }
   },

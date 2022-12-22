@@ -11,6 +11,7 @@ import Objectives from './Objectives';
 import Team from './Team';
 import Contacts from './Contacts';
 import Map from './Map';
+import CoreValues from './CoreValues';
 
 const About = () => {
   return (
@@ -19,6 +20,7 @@ const About = () => {
       <AboutMaven />
       <Stats />
       <Objectives />
+      <CoreValues />
       <Team />
       <Faqs />
       <Contacts />

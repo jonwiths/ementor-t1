@@ -49,10 +49,7 @@ const MentorApplicationProcess = () => {
         </div>
         <div className="w-full flex flex-col items-center mt-10">
           <p className="my-2">You still there, our future mentor?</p>
-          <Link
-            to="/mentor-register"
-            className=" p-4 mt-2 text-center bg-blue-700 text-gray-50 font-semibold hover:bg-blue-800 "
-          >
+          <Link to="/mentor-register" className="become-a-mentor-link">
             Yes, I want to be a mentor
           </Link>
           <p className="md:mt-4 mt-6 font-semibold text-center">

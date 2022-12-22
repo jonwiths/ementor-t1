@@ -50,14 +50,14 @@ const MentorRequirements = () => {
             mode of learning. That's why almost 100% of our E-mentors here are
             teaching for FREE.
           </p>
-          <p className="mt-4 text-justify md:text-left">
+          <p className="mt-4 text-justify md:text-left mb-2">
             This place if for people who want to share their knowledge
             unconditionally.
           </p>
 
           <Link
             to="/mentor-register"
-            className="max-w-[240px] p-4 mt-4 text-center bg-blue-700 text-gray-50 font-semibold hover:bg-blue-800 "
+            className="become-a-mentor-link max-w-[250px]"
           >
             Become an E-mentor
           </Link>

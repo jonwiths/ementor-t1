@@ -13,10 +13,10 @@ const Stats = () => {
       <div className="container w-full mx-auto flex items-center justify-between sm:flex-row flex-col">
         <div className="pt-5 md:pt-0">
           <h2 className="lg:text-4xl text-3xl  text-center  md:pt-0">
-            Starting statistics.
+            Our Growing Statistics.
           </h2>{' '}
         </div>
-        <div className="md:pt-5 pt-10 pb-5 flex gap-x-10 gap-y-5 sm:flex-row flex-col">
+        <div className="py-5  flex gap-x-10 gap-y-3 sm:flex-row flex-col">
           <div className="flex gap-2 items-center">
             <IoIosPeople size={40} className="md:mr-3 mr-2" />
             <h3 className="font-bold">{sampleStudents}</h3>

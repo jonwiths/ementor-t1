@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import {
-  BsFacebook,
-  BsLinkedin,
-  BsArrowLeftCircle,
-  BsArrowRightCircle
-} from 'react-icons/bs';
+import { BsFacebook, BsLinkedin } from 'react-icons/bs';
 
 import samplePhoto from '../../assets/background/sample-user-profile-1g.jpg';
 

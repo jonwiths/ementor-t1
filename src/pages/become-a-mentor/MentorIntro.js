@@ -16,14 +16,11 @@ const MentorIntro = () => {
         <h4 className="md:text-center ">
           Help us build a new world of sharing knowledge to the future leaders.{' '}
         </h4>
-        <h4 className="md:text-center ">
+        <h4 className="md:text-center mb-4">
           Join the high quality instructors who are passionate to share their
           expertise and help students grow.
         </h4>
-        <Link
-          to="/mentor-register"
-          className="my-7 mb-3 py-4 px-7 bg-blue-700 text-gray-50 font-semibold hover:bg-blue-800 "
-        >
+        <Link to="/mentor-register" className="become-a-mentor-link">
           Become a mentor
         </Link>
         <div className="w-full">

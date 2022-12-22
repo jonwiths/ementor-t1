@@ -1,5 +1,5 @@
-import maleImage from '../assets/background/sample-user-profile-1g.jpg';
-import femaleImage from '../assets/background/sample-user-profile-2g.jpg';
+import maleImage from '../assets/background/.webp/sample-user-profile-1g.webp';
+import femaleImage from '../assets/background/.webp/sample-user-profile-2g.webp';
 const team = [
   {
     id: 1,
