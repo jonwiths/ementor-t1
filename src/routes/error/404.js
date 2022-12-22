@@ -5,7 +5,7 @@ const Error404 = () => {
   return (
     <div>
       Error404
-      <a href="/">Back to home</a>
+      <Link to="/">Back to home</Link>
     </div>
   );
 };

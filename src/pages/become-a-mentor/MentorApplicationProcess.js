@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const MentorApplicationProcess = () => {
   return (
     <section>
-      <div className="container mx-auto flex flex-col p-4">
+      <div className="container mx-auto flex flex-col p-4 mt-4">
         <h1 className="font-semibold text-center">
           E-Mentor Application Process
         </h1>
@@ -63,6 +63,7 @@ const MentorApplicationProcess = () => {
           <p className="mt-2">Phone: (+63)912 345 6789</p>
         </div>
       </div>
+      <hr className="border text-gray-800 mt-6" />
     </section>
   );
 };

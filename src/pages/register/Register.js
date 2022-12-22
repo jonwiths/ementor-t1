@@ -62,14 +62,14 @@ const Register = () => {
         setS_cpassword('');
         s_passwordRef.current.focus();
       } else {
-        await axios.post('http://localhost:8000/api/auth/register', {
-          s_fname,
-          s_lname,
-          s_email,
-          s_phone,
-          s_password,
-          s_cpassword
-        });
+        // await axios.post('http://localhost:8000/api/auth/register', {
+        //   s_fname,
+        //   s_lname,
+        //   s_email,
+        //   s_phone,
+        //   s_password,
+        //   s_cpassword
+        // });
 
         setRegisterStatus('Account creation successful!');
         clearInput();
@@ -133,8 +133,8 @@ const Register = () => {
                       registerStatus ===
                         'Email or Phone number already exists!' ||
                       registerStatus === 'User already exists!'
-                        ? 'pb-2 text-red-700'
-                        : 'pb-2 text-green-700'
+                        ? 'px-1 py-2 text-red-700 bg-red-100 text-center mb-2 rounded-lg'
+                        : 'px-1 py-2 text-green-700 bg-green-100 text-center mb-2 rounded-lg'
                     }
                   >
                     <HiExclamationCircle

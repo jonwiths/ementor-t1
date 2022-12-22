@@ -6,6 +6,7 @@ import MentorFeedback from './MentorFeedback';
 import MentorHeader from './MentorHeader';
 import MentorIntro from './MentorIntro';
 import MentorRequirements from './MentorRequirements';
+import MentorTestimonials from './MentorTestimonials';
 
 const BecomeAMentor = () => {
   return (
@@ -17,6 +18,7 @@ const BecomeAMentor = () => {
         <Stats />
         <MentorApplicationProcess />
         <MentorFeedback />
+        <MentorTestimonials />
       </section>
     </>
   );

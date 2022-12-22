@@ -46,7 +46,11 @@ const MentorIntro = () => {
           </div>
         </div>
         <div className="py-4">
-          <img src={homepageBg} alt="..." className="h-[500px] border-4" />
+          <img
+            src={homepageBg}
+            alt="..."
+            className="h-[500px] border-4 object-cover"
+          />
         </div>
         <div className="mt-12">
           <h2 className="font-semibold text-center">
