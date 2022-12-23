@@ -21,7 +21,9 @@ const Register = () => {
   const [s_password, setS_password] = useState('');
   const [s_cpassword, setS_cpassword] = useState('');
 
-  const [registerStatus, setRegisterStatus] = useState('');
+  const [registerStatus, setRegisterStatus] = useState('uncomment code status');
+  const [passwordStatus, setPasswordStatus] = useState('');
+  const [phoneStatus, setPhoneStatus] = useState('');
 
   const clearInput = () => {
     setS_fname('');
@@ -39,12 +41,12 @@ const Register = () => {
     e.preventDefault();
     try {
       if (
-        s_fname === '' &&
-        s_lname === '' &&
-        s_email === '' &&
-        s_phone === '' &&
-        s_password === '' &&
-        s_cpassword === ''
+        s_fname.trim() === '' &&
+        s_lname.trim() === '' &&
+        s_email.trim() === '' &&
+        s_phone.trim() === '' &&
+        s_password.trim() === '' &&
+        s_cpassword.trim() === ''
       ) {
         setRegisterStatus('Please fill up all the input.');
       } else if (
@@ -56,8 +58,21 @@ const Register = () => {
         !s_cpassword
       ) {
         setRegisterStatus('Please fill up all the input.');
+      } else if (
+        s_phone.trim().length < 11 ||
+        !s_phone.trim().startsWith('09')
+      ) {
+        setPhoneStatus(`Phone number format should be: 09XXXXXXXXX.`);
+        setRegisterStatus('Invalid Phone number format.');
+        s_phoneRef.current.focus();
       } else if (s_password !== s_cpassword) {
         setRegisterStatus(`Password didn't match.`);
+        setS_password('');
+        setS_cpassword('');
+        s_passwordRef.current.focus();
+      } else if (s_password.length <= 7) {
+        setRegisterStatus('Invalid password.');
+        setPasswordStatus('Password must be 8 characters or more.');
         setS_password('');
         setS_cpassword('');
         s_passwordRef.current.focus();
@@ -84,11 +99,23 @@ const Register = () => {
     s_fnameRef.current.focus();
   }, []);
 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setRegisterStatus('');
+  //   }, 4000);
+  // }, [registerStatus]);
+
   useEffect(() => {
     setTimeout(() => {
-      setRegisterStatus('');
+      setPasswordStatus('');
     }, 4000);
-  }, [registerStatus]);
+  }, [passwordStatus]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPhoneStatus('');
+    }, 4000);
+  }, [phoneStatus]);
 
   return (
     <section className="relative text-gray-800 " id="register">
@@ -127,12 +154,17 @@ const Register = () => {
                 {registerStatus && (
                   <p
                     className={
+                      registerStatus === 'Invalid password.' ||
                       registerStatus === 'Please fill up all the input.' ||
                       registerStatus === `Password didn't match.` ||
                       registerStatus === 'Account creation failed!' ||
                       registerStatus ===
                         'Email or Phone number already exists!' ||
-                      registerStatus === 'User already exists!'
+                      registerStatus === 'User already exists!' ||
+                      registerStatus ===
+                        'Password must be 8 characters or more.' ||
+                      registerStatus === 'Invalid Phone number format.' ||
+                      registerStatus === 'uncomment code status'
                         ? 'px-1 py-2 text-red-700 bg-red-100 text-center mb-2 rounded-lg'
                         : 'px-1 py-2 text-green-700 bg-green-100 text-center mb-2 rounded-lg'
                     }
@@ -185,7 +217,10 @@ const Register = () => {
                     value={s_email}
                   />
                 </span>
-
+                {/* PASSWORD STATUS */}
+                {phoneStatus && (
+                  <p className="text-red-700 text-sm p-2">{phoneStatus}</p>
+                )}
                 <span className="w-full flex items-center justify-center p-4 bg-blue-50 rounded-xl mb-2">
                   <input
                     ref={s_phoneRef}
@@ -193,13 +228,16 @@ const Register = () => {
                     className="outline-none border-none w-full  bg-transparent"
                     placeholder="Phone Number (11 digits only)"
                     autoComplete="off"
-                    maxLength={11}
+                    // maxLength={11}
                     name="s_phone"
                     onChange={(e) => setS_phone(e.target.value.slice(0, 11))}
                     value={s_phone}
                   />
                 </span>
-
+                {/* PASSWORD STATUS */}
+                {passwordStatus && (
+                  <p className="text-red-700 text-sm p-2">{passwordStatus}</p>
+                )}
                 <span className="w-full flex items-center justify-center p-4 gap-1 bg-blue-50 rounded-xl mb-2">
                   <input
                     ref={s_passwordRef}

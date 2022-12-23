@@ -8,7 +8,7 @@ const ServicesIntro = () => {
     <article className="mt-6">
       <div className="container mx-auto p-4">
         <h1 className="font-semibold text-center ">
-          Are you want to <span className="text-blue-700">change</span>
+          Are you want to <span className="text-blue-700">change </span>
           your mode of learning?
         </h1>
         <hr className="max-w-[500px] mx-auto border-gray-500 my-4" />
@@ -31,9 +31,9 @@ const ServicesIntro = () => {
                 className="object-cover max-h-[500px]"
               />
             </div>
-            <div className="md:w-1/2 w-full ">
+            <div className="md:w-1/2 w-full flex flex-col items-center md:items-start">
               <h2 className="font-semibold my-4 text-blue-700 uppercase text-center md:text-left">
-                Want to top on you class?
+                Want to top on your class?
               </h2>
               <h3 className="font-semibold pb-4 text-center md:text-left">
                 Welcome to our Student's Portal.
@@ -44,12 +44,20 @@ const ServicesIntro = () => {
                 dignissimos? Inventore, quia dolore perferendis commodi nostrum
                 praesentium amet quos non? Esse, ex facilis.
               </p>
-              <Link
-                to="/register"
-                className="flex become-a-mentor-link max-w-[200px] mb-4"
-              >
-                Become a Student
-              </Link>
+              <div className="flex md:gap-4 gap-2 md:flex-row flex-col mb-4">
+                <Link
+                  to="/register"
+                  className="flex become-a-mentor-link max-w-[200px] "
+                >
+                  Become a Student
+                </Link>
+                <Link
+                  to="/login"
+                  className="flex max-w-[200px]  py-4 px-6 mt-2 text-center bg-blue-100 text-blue-700 font-semibold hover:bg-blue-200 rounded-full"
+                >
+                  Login as a Student
+                </Link>
+              </div>
             </div>
           </div>
           {/* Left */}
@@ -61,7 +69,7 @@ const ServicesIntro = () => {
                 className="object-cover max-h-[500px]"
               />
             </div>
-            <div className="md:w-1/2 w-full ">
+            <div className="md:w-1/2 w-full flex flex-col items-center md:items-start">
               <h2 className="font-semibold my-4 text-blue-700 uppercase text-center md:text-left">
                 Willing to share you knowledge for FREE?
               </h2>
@@ -74,12 +82,20 @@ const ServicesIntro = () => {
                 dignissimos? Inventore, quia dolore perferendis commodi nostrum
                 praesentium amet quos non? Esse, ex facilis.
               </p>
-              <Link
-                to="/register"
-                className="flex become-a-mentor-link max-w-[200px] mb-4"
-              >
-                Become a Mentor
-              </Link>
+              <div className="flex md:gap-4 gap-2 md:flex-row flex-col mb-4">
+                <Link
+                  to="/mentor-register"
+                  className="flex become-a-mentor-link max-w-[200px] "
+                >
+                  Become a Mentor
+                </Link>
+                <Link
+                  to="/mentor-login"
+                  className="flex max-w-[200px]  py-4 px-6 mt-2 text-center bg-blue-100 text-blue-700 font-semibold hover:bg-blue-200 rounded-full"
+                >
+                  Login as a Mentor
+                </Link>
+              </div>
             </div>
           </div>
         </div>

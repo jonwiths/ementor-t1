@@ -67,7 +67,7 @@ const Navbar = () => {
         }
       >
         <section className="">
-          <NavLink to="/" className=" text-2xl font-bold px-4">
+          <NavLink to="/" className="text-2xl font-bold px-4">
             {/* Maven-edu */}
             <img src={navLogo} alt="" />
           </NavLink>

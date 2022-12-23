@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 import { FiUser } from 'react-icons/fi';
 import { TbMinusVertical } from 'react-icons/tb';
@@ -11,19 +11,39 @@ import { HiExclamationCircle } from 'react-icons/hi';
 
 const Login = () => {
   const emailRef = useRef();
+  const passwordRef = useRef();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const [loginStatus, setLoginStatus] = useState('Login status');
+  const [loginStatus, setLoginStatus] = useState('uncomment code status');
 
   const login = () => {
-    console.log('Login button');
+    if (email.trim() === '' && password.trim() === '') {
+      setLoginStatus('Please fill up all the input.');
+      emailRef.current.focus();
+    } else if (email.trim() === '') {
+      setLoginStatus('Email is empty.');
+      emailRef.current.focus();
+    } else if (password.trim() === '') {
+      setLoginStatus('Password is empty.');
+      passwordRef.current.focus();
+    } else {
+      setLoginStatus('Invalid username or password.');
+      // passwordRef.current.focus();
+      setPassword('');
+    }
   };
 
   useEffect(() => {
     emailRef.current.focus();
   }, []);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoginStatus('');
+  //   }, 4000);
+  // }, [loginStatus]);
 
   return (
     <section className="relative text-gray-800 " id="login">
@@ -57,22 +77,26 @@ const Login = () => {
               className="login-form w-full"
               method="POST"
             >
-              <p
-                className={
-                  loginStatus === 'Fill up all input' ||
-                  loginStatus === 'Invalid username or password!' ||
-                  loginStatus === `User doesn't exist!`
-                    ? 'pb-2 text-red-700'
-                    : 'pb-2 text-green-700'
-                }
-              >
-                <HiExclamationCircle
-                  className={loginStatus !== '' ? 'inline' : 'hidden'}
-                  size={19}
-                  style={{ marginRight: '3px' }}
-                />
-                {loginStatus}
-              </p>
+              {loginStatus && (
+                <p
+                  className={
+                    loginStatus === 'Please fill up all the input.' ||
+                    loginStatus === 'Email is empty.' ||
+                    loginStatus === 'Password is empty.' ||
+                    loginStatus === 'Invalid username or password.' ||
+                    loginStatus === 'uncomment code status'
+                      ? 'px-1 py-2 text-red-700 bg-red-100  text-center mb-2 rounded-lg'
+                      : 'px-1 py-2 text-green-700 bg-green-100 text-center mb-2 rounded-lg'
+                  }
+                >
+                  <HiExclamationCircle
+                    className={loginStatus !== null ? 'inline' : 'hidden'}
+                    size={19}
+                    style={{ marginRight: '3px' }}
+                  />
+                  {loginStatus}
+                </p>
+              )}
               <div className="input-container w-full max-w-[350px] ">
                 <span className="w-full flex items-center justify-center p-4 gap-1 bg-blue-50 rounded-xl mb-2">
                   <FiUser size={25} />
@@ -83,17 +107,20 @@ const Login = () => {
                     className="outline-none border-none w-full p-1 bg-transparent"
                     placeholder="Email"
                     onChange={(e) => setEmail(e.target.value)}
+                    required={true}
                   />
                 </span>
                 <span className="w-full flex items-center justify-center p-4 gap-1 bg-blue-50 rounded-xl mb-4">
                   <RiLockPasswordLine size={25} />
                   <TbMinusVertical size={25} />
                   <input
+                    ref={passwordRef}
                     type="password"
                     className="outline-none border-none w-full p-1 bg-transparent"
                     placeholder="Password"
                     autoComplete="off"
                     onChange={(e) => setPassword(e.target.value)}
+                    required={true}
                   />
                 </span>
               </div>

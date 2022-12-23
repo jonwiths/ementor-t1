@@ -24,7 +24,7 @@ const Footer = () => {
                 <Link to="/about-us" className="hover:underline mb-4">
                   About us
                 </Link>
-                <Link to="/courses" className="hover:underline mb-4">
+                <Link to="/services" className="hover:underline mb-4">
                   Courses
                 </Link>
                 <Link to="/become-a-mentor" className="hover:underline mb-4">
