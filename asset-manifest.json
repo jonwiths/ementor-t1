@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/ementor-t1/static/css/main.06140335.css",
-    "main.js": "/ementor-t1/static/js/main.76eff4b7.js",
+    "main.css": "/ementor-t1/static/css/main.6a5e49c6.css",
+    "main.js": "/ementor-t1/static/js/main.3148aece.js",
     "static/media/homepage-bg.png": "/ementor-t1/static/media/homepage-bg.786dbfc6d688f3be6760.png",
     "static/media/homepage-bg.webp": "/ementor-t1/static/media/homepage-bg.0e265535ef78876d34a9.webp",
+    "static/media/profile-arjay.webp": "/ementor-t1/static/media/profile-arjay.9fc32487184d608e23af.webp",
     "static/media/1080x1920.jpg": "/ementor-t1/static/media/1080x1920.332367da4293d51f3572.jpg",
+    "static/media/profile-cherry.webp": "/ementor-t1/static/media/profile-cherry.99fe9061db042cda99fa.webp",
+    "static/media/profile-jonslogar.webp": "/ementor-t1/static/media/profile-jonslogar.ba93028dacf585771604.webp",
     "static/media/sample-page-bg.webp": "/ementor-t1/static/media/sample-page-bg.051715226ff1dc0df188.webp",
+    "static/media/profile-alex.webp": "/ementor-t1/static/media/profile-alex.0dc14d7510e0a50bcc56.webp",
     "static/media/sample-user-profile-2g.jpg": "/ementor-t1/static/media/sample-user-profile-2g.dee73574fe37b42be979.jpg",
     "static/media/sample-user-profile-1g.jpg": "/ementor-t1/static/media/sample-user-profile-1g.a0c6d197bf54716eeed6.jpg",
-    "static/media/sample-user-profile-2g.webp": "/ementor-t1/static/media/sample-user-profile-2g.f94fd2b997fb6e09e813.webp",
+    "static/media/profile-mary-joy.webp": "/ementor-t1/static/media/profile-mary-joy.074963bec5aec6741ee0.webp",
     "static/media/sample-user-profile-1g.webp": "/ementor-t1/static/media/sample-user-profile-1g.ee7570eae6acc16f1db1.webp",
     "index.html": "/ementor-t1/index.html",
-    "main.06140335.css.map": "/ementor-t1/static/css/main.06140335.css.map",
-    "main.76eff4b7.js.map": "/ementor-t1/static/js/main.76eff4b7.js.map"
+    "main.6a5e49c6.css.map": "/ementor-t1/static/css/main.6a5e49c6.css.map",
+    "main.3148aece.js.map": "/ementor-t1/static/js/main.3148aece.js.map"
   },
   "entrypoints": [
-    "static/css/main.06140335.css",
-    "static/js/main.76eff4b7.js"
+    "static/css/main.6a5e49c6.css",
+    "static/js/main.3148aece.js"
   ]
 }
