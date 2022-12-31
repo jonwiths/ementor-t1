@@ -6,10 +6,12 @@ import { FiUser } from 'react-icons/fi';
 import { TbMinusVertical } from 'react-icons/tb';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { FcGoogle } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { HiExclamationCircle } from 'react-icons/hi';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -29,9 +31,8 @@ const Login = () => {
       setLoginStatus('Password is empty.');
       passwordRef.current.focus();
     } else {
-      setLoginStatus('Invalid username or password.');
-      // passwordRef.current.focus();
-      setPassword('');
+      // setLoginStatus('Invalid username or password.');
+      navigate('/student-dashboard');
     }
   };
 
