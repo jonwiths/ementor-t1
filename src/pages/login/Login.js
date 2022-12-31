@@ -6,7 +6,7 @@ import { FiUser } from 'react-icons/fi';
 import { TbMinusVertical } from 'react-icons/tb';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { FcGoogle } from 'react-icons/fc';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { HiExclamationCircle } from 'react-icons/hi';
 
 const Login = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import About from '../../pages/about/About';
 import Services from '../../pages/services/Services';
@@ -15,6 +15,15 @@ import MentorRegister from '../../pages/become-a-mentor/mentor-form/MentorRegist
 import MentorLogin from '../../pages/become-a-mentor/mentor-form/MentorLogin';
 
 const HomePageRoutes = () => {
+  const currentUser = true;
+
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/" />;
+    }
+    return children;
+  };
+
   return (
     <Routes>
       <Route path="/" exact element={<SharedLayout />}>
@@ -27,11 +36,26 @@ const HomePageRoutes = () => {
 
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
-        <Route path="/student-dashboard/" element={<StudentDashboard />} />
-        <Route path="/mentor-dashboard/" element={<MentorDashboard />} />
-
         <Route path="*" element={<Error404 />} />
       </Route>
+      <Route
+        path="/student-dashboard/"
+        element={
+          <ProtectedRoute>
+            {' '}
+            <StudentDashboard />{' '}
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/mentor-dashboard/"
+        element={
+          <ProtectedRoute>
+            {' '}
+            <MentorDashboard />{' '}
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 };
