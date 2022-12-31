@@ -62,7 +62,7 @@ const Register = () => {
         s_phone.trim().length < 11 ||
         !s_phone.trim().startsWith('09')
       ) {
-        setPhoneStatus(`Phone number format should be: 09XXXXXXXXX.`);
+        setPhoneStatus(`Phone number format is: 09XXXXXXXXX.`);
         setRegisterStatus('Invalid Phone number format.');
         s_phoneRef.current.focus();
       } else if (s_password !== s_cpassword) {
@@ -77,14 +77,14 @@ const Register = () => {
         setS_cpassword('');
         s_passwordRef.current.focus();
       } else {
-        await axios.post('http://localhost:8000/api/auth/register', {
-          s_fname,
-          s_lname,
-          s_email,
-          s_phone,
-          s_password,
-          s_cpassword
-        });
+        // await axios.post('http://localhost:8000/api/auth/register', {
+        //   s_fname,
+        //   s_lname,
+        //   s_email,
+        //   s_phone,
+        //   s_password,
+        //   s_cpassword
+        // });
 
         setRegisterStatus('Account creation successful!');
         clearInput();
@@ -108,13 +108,13 @@ const Register = () => {
   useEffect(() => {
     setTimeout(() => {
       setPasswordStatus('');
-    }, 4000);
+    }, 5000);
   }, [passwordStatus]);
 
   useEffect(() => {
     setTimeout(() => {
       setPhoneStatus('');
-    }, 4000);
+    }, 5000);
   }, [phoneStatus]);
 
   return (

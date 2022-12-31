@@ -21,14 +21,14 @@ const HomePageRoutes = () => {
         <Route exact index element={<Home />} />
         <Route exact path="/about-us" element={<About />} />
         <Route exact path="/services" element={<Services />} />
-        <Route path="/become-a-mentor" element={<BecomeAMentor />} />
-        <Route path="/mentor-register" element={<MentorRegister />} />
-        <Route path="/mentor-login" element={<MentorLogin />} />
+        <Route exact path="/become-a-mentor" element={<BecomeAMentor />} />
+        <Route exact path="/mentor-register" element={<MentorRegister />} />
+        <Route exact path="/mentor-login" element={<MentorLogin />} />
 
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
-        <Route exact path="/student-dashboard" element={<StudentDashboard />} />
-        <Route exact path="/mentor-dashboard" element={<MentorDashboard />} />
+        <Route path="/student-dashboard/" element={<StudentDashboard />} />
+        <Route path="/mentor-dashboard/" element={<MentorDashboard />} />
 
         <Route path="*" element={<Error404 />} />
       </Route>

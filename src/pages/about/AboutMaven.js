@@ -4,12 +4,13 @@ import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { FaEnvelope } from 'react-icons/fa';
 
 import aboutBg from '../../assets/background/1080x1920.jpg';
+import AboutMavenFaqs from './AboutMavenFaqs';
 
 const AboutMaven = () => {
   return (
     <article className="">
-      <div className="container w-full mx-auto flex flex-col-reverse md:flex-row">
-        <div className="md:w-2/5 w-full p-4">
+      <div className="container w-full mx-auto flex flex-col-reverse lg:flex-row">
+        <div className="lg:w-2/5 w-full p-4">
           <h5 className="text-blue-800 md:pt-0 pt-2">
             What is this Maven-edu?
           </h5>
@@ -54,8 +55,10 @@ const AboutMaven = () => {
             </span>
             <h5 className="">maven.edu05@gmail.com</h5>
           </div>
+          <h3 className="font-semibold my-5">More about Maven-edu:</h3>
+          <AboutMavenFaqs />
         </div>
-        <div className="md:w-3/5 w-full p-2 ">
+        <div className="lg:w-3/5 w-full p-2 ">
           <img
             src={aboutBg}
             alt=""
