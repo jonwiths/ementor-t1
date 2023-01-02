@@ -62,7 +62,7 @@ const HomePageRoutes = () => {
       </Route>
 
       <Route
-        path="/mentor-dashboard/"
+        path="mentor/1"
         element={
           <ProtectedRoute>
             {' '}
