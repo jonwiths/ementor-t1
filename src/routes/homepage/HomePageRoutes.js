@@ -8,11 +8,17 @@ import Home from '../../pages/home/Home';
 import Login from '../../pages/login/Login';
 import Register from '../../pages/register/Register';
 import SharedLayout from '../../layout/shared/SharedLayout';
-import StudentDashboard from '../../components/students/StudentDashboard';
+// import StudentDashboard from '../../components/students/StudentDashboard';
 import MentorDashboard from '../../components/mentors/Dashboard';
 import Error404 from '../error/404';
 import MentorRegister from '../../pages/become-a-mentor/mentor-form/MentorRegister';
 import MentorLogin from '../../pages/become-a-mentor/mentor-form/MentorLogin';
+
+import StudentBooking from '../../components/students/student-booking/StudentBooking';
+import StudentHome from '../../components/students/student-home/StudentHome';
+import StudentHistory from '../../components/students/student-history/History';
+import StudentMentors from '../../components/students/student-mentor/Mentors';
+import StudentLayout from '../../components/students/shared/StudentLayout';
 
 const HomePageRoutes = () => {
   const currentUser = true;
@@ -38,15 +44,23 @@ const HomePageRoutes = () => {
         <Route exact path="/register" element={<Register />} />
         <Route path="*" element={<Error404 />} />
       </Route>
+
       <Route
-        path="/student-dashboard/"
+        path="student/1"
         element={
           <ProtectedRoute>
             {' '}
-            <StudentDashboard />{' '}
+            <StudentLayout />{' '}
           </ProtectedRoute>
         }
-      />
+      >
+        <Route index element={<StudentHome />} />
+        <Route path="booking" element={<StudentBooking />} />
+        <Route path="history" element={<StudentHistory />} />
+        <Route path="mentors" element={<StudentMentors />} />
+        <Route path="*" element={<Error404 />} />
+      </Route>
+
       <Route
         path="/mentor-dashboard/"
         element={

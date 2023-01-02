@@ -60,7 +60,7 @@ const Navbar = () => {
               <div
                 className={
                   userClick
-                    ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-16 right-0 -z-2 p-4'
+                    ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-16 right-0 z-200 p-4'
                     : 'hidden'
                 }
               >
@@ -68,7 +68,9 @@ const Navbar = () => {
                 <p>Student</p>
                 <div className="border border-blue-700 my-2"></div>
                 <div className="flex flex-col items-start font-medium ">
-                  <Link className="p-1 w-full">Dashboard</Link>
+                  <Link to="/student/1/" className="p-1 w-full">
+                    Dashboard
+                  </Link>
                   <Link className="p-1 w-full">Profile Settings</Link>
                   <Link to="/login" className="p-1 w-full text-left">
                     Logout
@@ -178,7 +180,7 @@ const Navbar = () => {
                 className={userClick ? ' flex flex-col items-start ' : 'hidden'}
               >
                 <Link
-                  to="/student-dashboard"
+                  to="/student/1"
                   className="w-full font-medium text-lg p-1"
                 >
                   Dashboard

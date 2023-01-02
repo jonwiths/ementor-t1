@@ -1,23 +1,21 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+// import React from 'react';
+// import { Outlet } from 'react-router-dom';
 
-import SNavbar from './navbar/SNavbar';
-import SLeftbar from './leftbar/SLeftbar';
-import SRightbar from './rightbar/SRightbar';
+// import SNavbar from './navbar/SNavbar';
+// import SLeftbar from './leftbar/SLeftbar';
+// import SRightbar from './rightbar/SRightbar';
+// import Home from './student-home/Home';
 
-const StudentDashboard = () => {
-  return (
-    <>
-      <section className="">
-        <SNavbar />
-        <div className="flex justify-between">
-          <SLeftbar />
-          <Outlet />
-          <SRightbar />
-        </div>
-      </section>
-    </>
-  );
-};
+// import StudentRoutes from './routes/StudentRoutes';
 
-export default StudentDashboard;
+// const StudentDashboard = () => {
+//   return (
+//     <>
+//       <section className="">
+//         <StudentRoutes />
+//       </section>
+//     </>
+//   );
+// };
+
+// export default StudentDashboard;

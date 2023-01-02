@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Error404 = () => {
+  const navigate = useNavigate();
   return (
     <section>
       <div className="container mx-auto p-4">
         Error404
-        <Link to="/">Back to home</Link>
+        <button onClick={() => navigate(-1)}>Back one page</button>
+        <button onClick={() => navigate('/')}>Back to home</button>
       </div>
     </section>
   );

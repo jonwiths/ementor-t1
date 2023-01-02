@@ -32,7 +32,7 @@ const Login = () => {
       passwordRef.current.focus();
     } else {
       // setLoginStatus('Invalid username or password.');
-      navigate('/student-dashboard');
+      navigate('/student/1');
     }
   };
 

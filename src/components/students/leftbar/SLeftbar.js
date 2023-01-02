@@ -19,9 +19,7 @@ const SLeftbar = () => {
     <>
       <div
         className={
-          leftBar
-            ? 'hidden'
-            : ' fixed h-screen bg-blue-400 p-2 flex justify-center'
+          leftBar ? 'hidden' : 'fixed bg-blue-400  flex justify-center z-100'
         }
         onClick={() => setLeftBar(!leftBar)}
       >
@@ -29,46 +27,60 @@ const SLeftbar = () => {
           <AiOutlineDoubleRight size={30} />
         </button>
       </div>
-      <aside className="s-leftbar p-4">
+      <aside className="s-leftbar mr-4 ">
         <div className={leftBar ? 'md:block hidden bg-gray-100' : 'hidden'}>
           <div className="relative">
             <button
-              className="absolute top-2 right-2 "
+              className="absolute top-2 right-2 z-20"
               onClick={() => setLeftBar(!leftBar)}
             >
               <AiOutlineCloseCircle size={30} className="" />
             </button>
-            <div className="px-4 py-8 mt-4">
+            <div className="px-4 py-10 mt-4">
               <section className="menu">
-                <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                  <Link to="/student-dashboard">
+                <div>
+                  <Link
+                    to="/student/1"
+                    className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2"
+                  >
                     <RxDashboard size={30} className="font-semibold" />
+                    <h4 className="font-semibold">Dashboard</h4>
                   </Link>
-                  <h4 className="font-semibold">Dashboard</h4>
                 </div>
-                <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                  <Link to="/student-booking">
+                <div>
+                  <Link
+                    to="/student/1/booking"
+                    className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2"
+                  >
                     <AiOutlineClockCircle size={30} className="font-semibold" />
+                    <h4 className="font-semibold">Booking</h4>
                   </Link>
-                  <h4 className="font-semibold">Booking</h4>
                 </div>
-                <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                  <Link to="/student-mentor">
+                <div>
+                  <Link
+                    to="/student/1/mentors"
+                    className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2"
+                  >
                     <IoPeopleOutline size={30} className="font-semibold" />
+                    <h4 className="font-semibold">Mentors</h4>
                   </Link>
-                  <h4 className="font-semibold">Mentors</h4>
                 </div>
-                <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                  <Link to="/student-history">
+                <div>
+                  <Link
+                    to="/student/1/history"
+                    className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2"
+                  >
                     <MdHistory size={30} className="font-semibold" />
+                    <h4 className="font-semibold">History</h4>
                   </Link>
-                  <h4 className="font-semibold">History</h4>
                 </div>
               </section>
             </div>
           </div>
         </div>
-        <div className="block md:hidden w-full bg-gray-100">
+
+        {/* Mobile */}
+        {/* <div className="block md:hidden w-full bg-gray-100">
           <div
             className={
               leftBar ? 'w-full block md:hidden bg-gray-100' : 'hidden'
@@ -84,13 +96,13 @@ const SLeftbar = () => {
               <div className="px-4 py-8 mt-4">
                 <section className="menu">
                   <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                    <Link to="/student-dashboard">
+                    <Link to="/student/1">
                       <RxDashboard size={30} className="font-semibold" />
                     </Link>
                     <h4 className="font-semibold">Dashboard</h4>
                   </div>
                   <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                    <Link to="/student-booking">
+                    <Link to="/student/1/booking">
                       <AiOutlineClockCircle
                         size={30}
                         className="font-semibold"
@@ -99,13 +111,13 @@ const SLeftbar = () => {
                     <h4 className="font-semibold">Booking</h4>
                   </div>
                   <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                    <Link to="/student-mentor">
+                    <Link to="/student/1/mentors">
                       <IoPeopleOutline size={30} className="font-semibold" />
                     </Link>
                     <h4 className="font-semibold">Mentors</h4>
                   </div>
                   <div className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2">
-                    <Link to="/student-history">
+                    <Link to="/student/1/history">
                       <MdHistory size={30} className="font-semibold" />
                     </Link>
                     <h4 className="font-semibold">History</h4>
@@ -114,7 +126,7 @@ const SLeftbar = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </aside>
     </>
   );
