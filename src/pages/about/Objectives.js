@@ -14,11 +14,10 @@ const Objectives = () => {
               <span className="text-blue-700 font-bold"> OBJECTIVES</span>
             </h2>
             <p className="pt-3 text-justify">
-              <span className="font-semibold italic">Maven</span> means that it
-              is the best way to show that someone loves knowledge and loves to
-              share it. They will often have a great deal of knowledge in a
-              particular subject (or multiple subjects). They will always be
-              happy to share what they know too.
+              Maven-edu was made to assist students who want to advance or
+              enhance their knowledge, especially those who are struggling with
+              a particular subject. This is accomplished by giving mentees
+              support, direction, and coaching from mentors with more expertise.
             </p>
           </div>
           <h5 className="text-blue-800 md:pt-0 pt-2">Mission and Vision</h5>

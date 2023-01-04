@@ -11,7 +11,7 @@ const Professor = () => {
         {mentors.map((mentor) => (
           <article key={mentor.id} className="">
             <div className="border border-blue-900 rounded-2xl p-2  mb-2">
-              <div className="flex justify-between ">
+              <div className="flex justify-between md:px-4 px-0">
                 {/* Image */}
                 <div className="flex gap-x-3 justify-center items-center">
                   <img

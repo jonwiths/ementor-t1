@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import About from '../../pages/about/About';
@@ -8,17 +7,22 @@ import Home from '../../pages/home/Home';
 import Login from '../../pages/login/Login';
 import Register from '../../pages/register/Register';
 import SharedLayout from '../../layout/shared/SharedLayout';
-// import StudentDashboard from '../../components/students/StudentDashboard';
-import MentorDashboard from '../../components/mentors/Dashboard';
 import Error404 from '../error/404';
-import MentorRegister from '../../pages/become-a-mentor/mentor-form/MentorRegister';
-import MentorLogin from '../../pages/become-a-mentor/mentor-form/MentorLogin';
+import MentorRegister from '../../pages/become-a-mentor/mentor-form/register/MentorRegister';
+import MentorLogin from '../../pages/become-a-mentor/mentor-form/login/MentorLogin';
 
 import StudentBooking from '../../components/students/student-booking/StudentBooking';
 import StudentHome from '../../components/students/student-home/StudentHome';
 import StudentHistory from '../../components/students/student-history/History';
 import StudentMentors from '../../components/students/student-mentor/Mentors';
 import StudentLayout from '../../components/students/shared/StudentLayout';
+
+import MentorHome from '../../components/mentors/mentor-home/MentorHome';
+import MentorBooking from '../../components/mentors/mentor-booking/MentorBooking';
+import MentorTimings from '../../components/mentors/mentor-sched-timing/MentorTimings';
+import MentorReviews from '../../components/mentors/mentor-reviews/MentorReviews';
+import MentorInvoice from '../../components/mentors/mentor-invoice/MentorInvoice';
+import MentorLayout from '../../components/mentors/shared/MentorLayout';
 
 const HomePageRoutes = () => {
   const currentUser = true;
@@ -66,10 +70,17 @@ const HomePageRoutes = () => {
         element={
           <ProtectedRoute>
             {' '}
-            <MentorDashboard />{' '}
+            <MentorLayout />{' '}
           </ProtectedRoute>
         }
-      />
+      >
+        <Route index element={<MentorHome />} />
+        <Route path="booking" element={<MentorBooking />} />
+        <Route path="reviews" element={<MentorReviews />} />
+        <Route path="schedule-timings" element={<MentorTimings />} />
+        <Route path="invoices" element={<MentorInvoice />} />
+        <Route path="*" element={<Error404 />} />
+      </Route>
     </Routes>
   );
 };

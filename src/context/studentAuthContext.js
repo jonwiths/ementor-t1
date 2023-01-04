@@ -21,7 +21,7 @@ const StudentAuthContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    localStorage.setItem('user', JSON.stringify(currentUser));
+    localStorage.setItem('student_user', JSON.stringify(currentUser));
   }, [currentUser]);
 
   return (
@@ -30,3 +30,5 @@ const StudentAuthContextProvider = ({ children }) => {
     </StudentAuthContext.Provider>
   );
 };
+
+export default StudentAuthContextProvider;
