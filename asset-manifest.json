@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ementor-t1/static/css/main.6dca4d01.css",
-    "main.js": "/ementor-t1/static/js/main.c388c1e5.js",
+    "main.css": "/ementor-t1/static/css/main.e4faa92b.css",
+    "main.js": "/ementor-t1/static/js/main.e8c0cff0.js",
     "static/media/homepage-bg.png": "/ementor-t1/static/media/homepage-bg.786dbfc6d688f3be6760.png",
     "static/media/homepage-bg.webp": "/ementor-t1/static/media/homepage-bg.0e265535ef78876d34a9.webp",
     "static/media/profile-arjay.webp": "/ementor-t1/static/media/profile-arjay.9fc32487184d608e23af.webp",
@@ -16,11 +16,11 @@
     "static/media/sample-user-profile-1g.webp": "/ementor-t1/static/media/sample-user-profile-1g.ee7570eae6acc16f1db1.webp",
     "static/media/maven-logo-2.jpg": "/ementor-t1/static/media/maven-logo-2.c435330286edfc0f0ee4.jpg",
     "index.html": "/ementor-t1/index.html",
-    "main.6dca4d01.css.map": "/ementor-t1/static/css/main.6dca4d01.css.map",
-    "main.c388c1e5.js.map": "/ementor-t1/static/js/main.c388c1e5.js.map"
+    "main.e4faa92b.css.map": "/ementor-t1/static/css/main.e4faa92b.css.map",
+    "main.e8c0cff0.js.map": "/ementor-t1/static/js/main.e8c0cff0.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dca4d01.css",
-    "static/js/main.c388c1e5.js"
+    "static/css/main.e4faa92b.css",
+    "static/js/main.e8c0cff0.js"
   ]
 }
