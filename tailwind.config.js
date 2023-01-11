@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'about-header-bg':
-          "url('/src/assets/background/.webp/sample-page-bg.webp')"
+          "url('/src/assets/background/.webp/sample-page-bg.webp')",
+        'student-login-bg':
+          "url('/src/assets/background/.webp/student-login-bg.webp')"
       }
     }
   },

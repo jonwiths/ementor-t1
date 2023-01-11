@@ -8,7 +8,8 @@ import {
   AiOutlineDoubleRight
 } from 'react-icons/ai';
 import { IoPeopleOutline } from 'react-icons/io5';
-import { MdHistory } from 'react-icons/md';
+import { MdHistory, MdOutlineReviews } from 'react-icons/md';
+import { TbFileInvoice } from 'react-icons/tb';
 
 const MLeftbar = () => {
   const [leftBar, setLeftBar] = useState(true);
@@ -25,8 +26,8 @@ const MLeftbar = () => {
           <AiOutlineDoubleRight size={30} />
         </button>
       </div>
-      <aside className="s-leftbar mr-4 w-full max-w-fit ">
-        <div className={leftBar ? 'md:block hidden bg-gray-100' : 'hidden'}>
+      <aside className="s-leftbar mr-4 w-full max-w-fit h-full bg-gray-100">
+        <div className={leftBar ? 'md:block hidden ' : 'hidden'}>
           <div className="relative">
             <button
               className="absolute top-2 right-2 z-20"
@@ -56,20 +57,29 @@ const MLeftbar = () => {
                 </div>
                 <div>
                   <Link
-                    to="/mentor/1/mentors"
+                    to="/mentor/1/schedule-timings"
                     className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2"
                   >
-                    <IoPeopleOutline size={30} className="font-semibold" />
-                    <h4 className="font-semibold">Mentors</h4>
+                    <MdHistory size={30} className="font-semibold" />
+                    <h4 className="font-semibold">Schedule Timig</h4>
                   </Link>
                 </div>
                 <div>
                   <Link
-                    to="/mentor/1/history"
+                    to="/mentor/1/invoices"
                     className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2"
                   >
-                    <MdHistory size={30} className="font-semibold" />
-                    <h4 className="font-semibold">History</h4>
+                    <TbFileInvoice size={30} className="font-semibold" />
+                    <h4 className="font-semibold">Invoices</h4>
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    to="/mentor/1/reviews"
+                    className="s-dashboard flex items-center gap-4 py-4 px-8 hover:bg-blue-300 rounded-xl mb-2"
+                  >
+                    <MdOutlineReviews size={30} className="font-semibold" />
+                    <h4 className="font-semibold">Reviews</h4>
                   </Link>
                 </div>
               </section>

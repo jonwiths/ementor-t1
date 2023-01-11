@@ -13,7 +13,6 @@ const StudentDashboard = () => {
         <div className="flex flex-col md:flex-row justify-between p-4 md:p-0">
           <SLeftbar />
           <Outlet />
-          <SRightbar />
         </div>
       </section>
     </>

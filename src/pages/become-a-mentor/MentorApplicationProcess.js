@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const MentorApplicationProcess = () => {
   return (
     <section>
-      <div className="container mx-auto flex flex-col p-4 mt-4">
-        <h1 className="font-semibold text-center">
+      <div className="container mx-auto flex flex-col p-4 ">
+        <h1 className="font-semibold text-center my-4">
           E-Mentor Application Process
         </h1>
         <div className="grid md:grid-cols-4 gap-x-2 mt-4">

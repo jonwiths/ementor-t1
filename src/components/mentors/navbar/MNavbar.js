@@ -65,14 +65,16 @@ const MNavbar = () => {
                 }
               >
                 <p className="font-semibold">John Alexis Cochico</p>
-                <p>Student</p>
+                <p>Mentor</p>
                 <div className="border border-blue-700 my-2"></div>
                 <div className="flex flex-col items-start font-medium ">
-                  <Link to="/student/1/" className="p-1 w-full">
-                    Dashboard
+                  <Link to="/mentor/1/profile" className="p-1 w-full">
+                    Profile
                   </Link>
-                  <Link className="p-1 w-full">Profile Settings</Link>
-                  <Link to="/login" className="p-1 w-full text-left">
+                  <Link to="mentor-settings" className="p-1 w-full">
+                    Profile Settings
+                  </Link>
+                  <Link to="/mentor-login" className="p-1 w-full text-left">
                     Logout
                   </Link>
                 </div>
@@ -180,16 +182,22 @@ const MNavbar = () => {
                 className={userClick ? ' flex flex-col items-start ' : 'hidden'}
               >
                 <Link
-                  to="/student/1"
+                  to="/mentor/1/profile"
                   className="w-full font-medium text-lg p-1"
                 >
-                  Dashboard
+                  Profile
                 </Link>
-                <Link className="w-full font-medium text-lg p-1">
+                <Link
+                  to="/mentor/1/mentor-settings"
+                  className="w-full font-medium text-lg p-1"
+                >
                   User Settings
                 </Link>
                 <button>
-                  <Link className="w-full font-medium text-lg p-1" to="/login">
+                  <Link
+                    to="/mentor/1/mentor-login"
+                    className="w-full font-medium text-lg p-1"
+                  >
                     Logout
                   </Link>
                 </button>

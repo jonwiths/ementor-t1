@@ -12,7 +12,7 @@ const Stats = () => {
     <article className="p-4 bg-blue-800 text-gray-100">
       <div className="container w-full mx-auto flex items-center justify-between sm:flex-row flex-col">
         <div className="pt-5 md:pt-0">
-          <h2 className="lg:text-4xl text-3xl  text-center  md:pt-0">
+          <h2 className="lg:text-4xl text-3xl text-center md:pt-0">
             Our Growing Statistics.
           </h2>{' '}
         </div>

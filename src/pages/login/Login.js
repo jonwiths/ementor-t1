@@ -48,8 +48,8 @@ const Login = () => {
 
   return (
     <section className="relative text-gray-800 " id="login">
-      <div className="container mx-auto  h-screen w-full flex flex-col md:flex-row lg:justify-around justify-center">
-        <div className="left-login w-full h-full hidden md:block bg-center">
+      <div className="container mx-auto  h-screen w-full flex flex-col md:flex-row lg:justify-around justify-center ">
+        <div className="left-login w-full h-full hidden md:block ">
           {/*bg-homepage-bg */}
           <div className="flex flex-col p-4 items-center justify-center mt-32">
             <div className="text-left">
@@ -81,11 +81,7 @@ const Login = () => {
               {loginStatus && (
                 <p
                   className={
-                    loginStatus === 'Please fill up all the input.' ||
-                    loginStatus === 'Email is empty.' ||
-                    loginStatus === 'Password is empty.' ||
-                    loginStatus === 'Invalid username or password.' ||
-                    loginStatus === 'uncomment code status'
+                    loginStatus !== 'Account creation successful!'
                       ? 'px-1 py-2 text-red-700 bg-red-100  text-center mb-2 rounded-lg'
                       : 'px-1 py-2 text-green-700 bg-green-100 text-center mb-2 rounded-lg'
                   }

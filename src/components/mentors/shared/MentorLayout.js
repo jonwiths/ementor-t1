@@ -10,10 +10,14 @@ const MentorDashboard = () => {
     <>
       <section className="">
         <MNavbar />
-        <div className="flex flex-col md:flex-row justify-between items-start md:p-0">
-          <MLeftbar />
-          <Outlet />
-          <MRightbar />
+        <div className="flex flex-col md:flex-row justify-between items-start ">
+          <div className="">
+            <MLeftbar className="" />
+          </div>
+          <div className="container mx-auto w-full  rounded-2xl bg-gray-50 mt-4">
+            <Outlet className="" />
+          </div>
+          {/* <MRightbar /> */}
         </div>
       </section>
     </>

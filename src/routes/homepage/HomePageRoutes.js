@@ -23,6 +23,8 @@ import MentorTimings from '../../components/mentors/mentor-sched-timing/MentorTi
 import MentorReviews from '../../components/mentors/mentor-reviews/MentorReviews';
 import MentorInvoice from '../../components/mentors/mentor-invoice/MentorInvoice';
 import MentorLayout from '../../components/mentors/shared/MentorLayout';
+import MentorSettings from '../../components/mentors/mentor-profile-settings/MentorProfileSettings';
+import MentorProfile from '../../components/mentors/mentor-profile/MentorProfile';
 
 const HomePageRoutes = () => {
   const currentUser = true;
@@ -79,6 +81,8 @@ const HomePageRoutes = () => {
         <Route path="reviews" element={<MentorReviews />} />
         <Route path="schedule-timings" element={<MentorTimings />} />
         <Route path="invoices" element={<MentorInvoice />} />
+        <Route path="profile" element={<MentorProfile />} />
+        <Route path="mentor-settings" element={<MentorSettings />} />
         <Route path="*" element={<Error404 />} />
       </Route>
     </Routes>
