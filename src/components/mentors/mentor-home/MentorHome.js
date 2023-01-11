@@ -8,9 +8,7 @@ const MentorHome = () => {
         <div className="w-full">
           <MentorSummary />
         </div>
-        <div className="py-4">
-          <Professor />
-        </div>
+        <div className="py-4"></div>
       </div>
     </section>
   );

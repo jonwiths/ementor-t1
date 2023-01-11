@@ -97,3 +97,7 @@
 .booking-day-btn {
   @apply py-4 px-6 bg-blue-50 border-blue-500 border rounded-xl focus:bg-blue-600 focus:text-white;
 }
+
+.img {
+  @apply w-full;
+}

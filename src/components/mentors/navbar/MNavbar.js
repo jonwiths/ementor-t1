@@ -60,7 +60,7 @@ const MNavbar = () => {
               <div
                 className={
                   userClick
-                    ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-16 right-0 z-200 p-4'
+                    ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-7 right-0 z-200 p-4'
                     : 'hidden'
                 }
               >
@@ -80,7 +80,7 @@ const MNavbar = () => {
                 </div>
               </div>
               {/* Notif div */}
-              <button
+              {/* <button
                 onClick={() => {
                   setNotifClick(!notifClick);
                   if (userClick) {
@@ -93,15 +93,15 @@ const MNavbar = () => {
                 ) : (
                   <IoNotificationsOutline size={30} />
                 )}
-              </button>
-              <div
+              </button> */}
+              {/* <div
                 className={
                   notifClick
                     ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-2 right-0 -z-2 p-4'
                     : 'hidden'
                 }
               >
-                {/* THIS NEED TO BE MAPPED USING API */}
+                
                 <div className="">
                   {notification.map((notif) => (
                     <article className="flex gap-2 pb-3" key={notif.id}>
@@ -123,7 +123,7 @@ const MNavbar = () => {
                     </article>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -195,7 +195,7 @@ const MNavbar = () => {
                 </Link>
                 <button>
                   <Link
-                    to="/mentor/1/mentor-login"
+                    to="/mentor-login"
                     className="w-full font-medium text-lg p-1"
                   >
                     Logout
@@ -205,7 +205,7 @@ const MNavbar = () => {
 
               {/* NOTIFICATION */}
 
-              <button
+              {/* <button
                 onClick={() => {
                   setNotifClick(!notifClick);
                   if (userClick) {
@@ -216,9 +216,9 @@ const MNavbar = () => {
               >
                 <h4 className="font-semibold">Notification </h4>
                 <AiFillCaretDown />
-              </button>
-              {/* THIS NEED TO BE MAPPED USING API */}
-              <div
+              </button> */}
+
+              {/* <div
                 className={
                   notifClick
                     ? ' flex flex-col items-start p-2 w-full'
@@ -245,7 +245,7 @@ const MNavbar = () => {
                     </div>
                   </article>
                 ))}
-              </div>
+              </div> */}
             </div>
           </section>
         </div>

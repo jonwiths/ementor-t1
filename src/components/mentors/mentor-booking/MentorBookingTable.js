@@ -3,8 +3,8 @@ import getStudentBooking from '../../../sampleData/mentor/studentBooking';
 
 const MentorBookingTable = () => {
   return (
-    <div className="relative overflow-x-auto mt-6">
-      <table className="w-full text-left text-white p-4 rounded-2xl">
+    <div className="overflow-x-auto mt-6 ">
+      <table className="w-full text-left text-white p-4 rounded-2xl ">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
           <tr>
             <th scope="col" className="px-6 py-3">

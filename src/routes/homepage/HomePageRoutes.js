@@ -25,6 +25,7 @@ import MentorInvoice from '../../components/mentors/mentor-invoice/MentorInvoice
 import MentorLayout from '../../components/mentors/shared/MentorLayout';
 import MentorSettings from '../../components/mentors/mentor-profile-settings/MentorProfileSettings';
 import MentorProfile from '../../components/mentors/mentor-profile/MentorProfile';
+import StudentProfile from '../../components/students/student-profile/StudentProfile';
 
 const HomePageRoutes = () => {
   const currentUser = true;
@@ -48,7 +49,8 @@ const HomePageRoutes = () => {
 
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
-        <Route path="*" element={<Error404 />} />
+        <Route path="/profile/mentor-name" element={<MentorProfile />} />
+        <Route path="/profile/student-name" element={<StudentProfile />} />
       </Route>
 
       <Route
@@ -64,7 +66,8 @@ const HomePageRoutes = () => {
         <Route path="booking" element={<StudentBooking />} />
         <Route path="history" element={<StudentHistory />} />
         <Route path="mentors" element={<StudentMentors />} />
-        <Route path="*" element={<Error404 />} />
+        <Route path="profile" element={<MentorProfile />} />
+        {/* <Route path="*" element={<Error404 />} /> */}
       </Route>
 
       <Route
@@ -83,8 +86,9 @@ const HomePageRoutes = () => {
         <Route path="invoices" element={<MentorInvoice />} />
         <Route path="profile" element={<MentorProfile />} />
         <Route path="mentor-settings" element={<MentorSettings />} />
-        <Route path="*" element={<Error404 />} />
+        {/* <Route path="*" element={<Error404 />} /> */}
       </Route>
+      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 };

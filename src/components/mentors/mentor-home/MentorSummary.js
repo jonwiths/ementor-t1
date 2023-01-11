@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { IoPeople } from 'react-icons/io5';
+import { BsCurrencyDollar } from 'react-icons/bs';
+import { AiFillCalendar } from 'react-icons/ai';
+
 const MentorSummary = () => {
   return (
     <section className="">
@@ -21,6 +25,38 @@ const MentorSummary = () => {
           </div>
           {/* inner top right */}
           <div className=""></div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-3 my-6">
+          <div className="flex items-center gap-3 bg-blue-100 p-5">
+            <div className="p-3 bg-blue-300 ">
+              <IoPeople size={35} />
+            </div>
+            <div className="flex flex-col ">
+              <h3 className="font-medium">23</h3>
+              <p>Total Students</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 bg-pink-100 p-5">
+            <div className="p-3 bg-pink-300 ">
+              <AiFillCalendar size={35} />
+            </div>
+            <div className="flex flex-col ">
+              <h3 className="font-medium">23</h3>
+              <p>Available Meetings</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 bg-violet-100 p-5">
+            <div className="p-3 bg-violet-300 ">
+              <BsCurrencyDollar size={35} />
+            </div>
+            <div className="flex flex-col ">
+              <h3 className="font-medium">0</h3>
+              <p>Total Earned</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

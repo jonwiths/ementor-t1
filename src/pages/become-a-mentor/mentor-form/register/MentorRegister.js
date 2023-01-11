@@ -132,14 +132,13 @@ const MentorRegister = () => {
               </h1>
               <h3 className="leading-normal">
                 Already have an account? <br />
-                Click <span>&nbsp;</span>
+                Just go and{' '}
                 <Link
                   to="/mentor-login"
                   className="text-blue-700 font-semibold"
                 >
-                  here
+                  Login here.
                 </Link>
-                <span>&nbsp;</span> to login
               </h3>
             </div>
           </div>

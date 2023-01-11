@@ -10,7 +10,7 @@ const Professor = () => {
       <div className="">
         {mentors.map((mentor) => (
           <article key={mentor.id} className="">
-            <div className="border border-blue-900 rounded-2xl p-2  mb-2">
+            <div className="border border-blue-900 rounded-2xl p-2 mb-2">
               <div className="flex justify-between md:px-4 px-0">
                 {/* Image */}
                 <div className="flex gap-x-3 justify-center items-center">
@@ -33,10 +33,10 @@ const Professor = () => {
                   </div>
                   <h3 className="font-medium text-green-600 my-2">FREE</h3>
                   <button className="w-[200px] px-4 py-2 mb-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full">
-                    <Link to="/mentor/1">Request a Schedule</Link>
+                    <Link to="/profile/mentor-name">Request a Schedule</Link>
                   </button>
                   <button className="w-[200px] px-4 py-2 bg-white hover:bg-gray-100 text-blue-700 border border-blue-700 rounded-full">
-                    <Link to="/mentor/1">View Profile</Link>
+                    <Link to="/profile/mentor-name">View Profile</Link>
                   </button>
                 </div>
               </div>
