@@ -60,7 +60,7 @@ const Navbar = () => {
               <div
                 className={
                   userClick
-                    ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-16 right-0 z-200 p-4'
+                    ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-7 right-0 z-200 p-4'
                     : 'hidden'
                 }
               >
@@ -78,7 +78,7 @@ const Navbar = () => {
                 </div>
               </div>
               {/* Notif div */}
-              <button
+              {/* <button
                 onClick={() => {
                   setNotifClick(!notifClick);
                   if (userClick) {
@@ -91,15 +91,15 @@ const Navbar = () => {
                 ) : (
                   <IoNotificationsOutline size={30} />
                 )}
-              </button>
-              <div
+              </button> */}
+              {/* <div
                 className={
                   notifClick
                     ? 'w-full md:w-auto bg-gray-200 rounded-xl absolute top-16 md:right-2 right-0 -z-2 p-4'
                     : 'hidden'
                 }
               >
-                {/* THIS NEED TO BE MAPPED USING API */}
+                THIS NEED TO BE MAPPED USING API
                 <div className="">
                   {notification.map((notif) => (
                     <article className="flex gap-2 pb-3" key={notif.id}>
@@ -121,7 +121,7 @@ const Navbar = () => {
                     </article>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

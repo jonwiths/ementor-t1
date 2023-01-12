@@ -50,6 +50,11 @@ const Mentors = () => {
             <h3>{new Date().toDateString()}</h3>
           </div>
         </div>
+        {search && (
+          <p className="text-gray-500">
+            Search result of: <span>' {search} '</span>
+          </p>
+        )}
 
         <div className="grid lg:grid-cols-3 w-full md:justify-evenly justify-center  rounded-2xl">
           {mentors

@@ -48,6 +48,11 @@ const MentorBooking = () => {
           </div>
         </div>
 
+        {search && (
+          <p className="text-gray-500 mt-4">
+            Search result of: <span>' {search} '</span>
+          </p>
+        )}
         {/* Table */}
         <div className="relative overflow-x-auto mt-6">
           <table className="w-full text-left text-white p-4 rounded-2xl">
