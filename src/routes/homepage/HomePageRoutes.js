@@ -39,11 +39,7 @@ const HomePageRoutes = () => {
 
   return (
     <Routes>
-      <Route
-        path="/https://jonwiths.github.io/ementor-t1/"
-        exact
-        element={<SharedLayout />}
-      >
+      <Route path="/" exact element={<SharedLayout />}>
         <Route exact index element={<Home />} />
         <Route exact path="/about-us" element={<About />} />
         <Route exact path="/services" element={<Services />} />
